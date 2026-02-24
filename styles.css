@@ -14,52 +14,81 @@ body {
   background-color: #333;
   padding: 20px;
 }
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+}
 
 .hamburger {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    width: 35px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 101;
 }
 
 .hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
 }
 
-.hamburger.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 50%; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+/* X animation */
+.hamburger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
 }
 
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
 }
 
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+.hamburger.active span:nth-child(3) {
+    bottom: 50%;
+    transform: rotate(-45deg);
 }
 
+/* Nav Links - Hidden by default */
 .nav-links {
-  display: none;
-  flex-direction: column;
-  list-style: none;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #111;
-  padding: 10px 20px;
-  margin: 0;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 80px;
+    transition: right 0.3s ease;
 }
 
-.nav-links.open {
-  display: flex;
+/* Nav Links - Visible when active */
+.nav-links.active {
+    right: 0;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 0;
+.nav-links li {
+    padding: 15px 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    color: #00bfff;
 }
