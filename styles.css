@@ -154,3 +154,14 @@ section {
     background-repeat: no-repeat;
     font-size: 28px;
 }
+section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+section p {
+    font-size: 20px;
+    max-width: 700px;
+    line-height: 1.8;
+}
