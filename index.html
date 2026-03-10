@@ -3,62 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Waverider Financial Strategies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-    
 <body>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#contact">Contact</a></li>
-      <li><a href="#resources">Community Resources</a></li>
-  </ul>
-        
-</nav>
-<section id="hero">
-    <!-- Landing/intro section -->
-    <b> Waverider Financial Strategies</b>
-</section>
+        <div class="nav-logo">WFS</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="#resources" onclick="toggleMenu()">Resources</a></li>
+        </ul>
+    </nav>
 
-<section id="about">
-    <!-- About section -->
-    <h2 class="fade-in">About </h2>
-    <p class="fade-in">
-        Waverider Financial Strategies is dedicated towards helping others achieve their money goals. Whether you're saving for retirement,
-    starting a nest egg to fund your first home, or just curious about how money works, we've got you covered.</p>
-</section>
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-tagline fade-in">Algorithmic Thinking. Real Results.</div>
+            <h1 class="hero-title fade-in">Waverider<br>Financial<br>Strategies</h1>
+            <p class="hero-sub fade-in">Quantitative trading systems built from the ground up.</p>
+            <a href="#about" class="hero-cta fade-in">Explore</a>
+        </div>
+        <div class="hero-scroll-hint">scroll</div>
+    </section>
 
-<section id="features">
-    <h2 class="slide-left">What We Deliver</h2>
-    <p class="slide-right">We know it's difficult to understand the financial markets and make the most of your capital power in today's
-        fast-paced digital world. We're here to break it all down and help you understand your next best move.</p>
-</section>
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="section-label slide-left">01 — About</div>
+            <h2 class="slide-left">Built by someone<br>who had to start over.</h2>
+            <div class="about-grid">
+                <p class="slide-right">
+                    Waverider Financial Strategies is the product of self-directed learning, discipline, and a genuine obsession with how markets move. 
+                    After release in January 2025, I committed to building technical skills from scratch — teaching myself Python, algorithmic backtesting, 
+                    and quantitative analysis while developing real trading systems.
+                </p>
+                <p class="slide-right">
+                    This isn't a company built on credentials. It's built on curiosity, consistency, and the belief that understanding the math behind markets 
+                    is accessible to anyone willing to put in the work. I'm that person.
+                </p>
+            </div>
+        </div>
+    </section>
 
-<section id="demo">
-    <h2 class="fade-in">  </h2>
-    <p class="fade-in"</p>
-</section>
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-inner">
+            <div class="section-label fade-in">02 — Projects</div>
+            <h2 class="fade-in">Systems I've Built</h2>
+            <div class="projects-grid">
 
-<section id="contact">
-    <h2 class="slide-left">Reach Out To The Family</h2>
-    <p class="slide-right">We'd love to hear from you. Call or email anytime. We're always available.</p>
-</section>
+                <div class="project-card fade-in">
+                    <div class="project-number">01</div>
+                    <h3>EMA Acceleration System</h3>
+                    <p>Detects the moment the 8-period EMA changes acceleration — the second derivative of price momentum. Built in ThinkScript for live ThinkorSwim charts with dynamic bull/bear arrows.</p>
+                    <div class="project-tags">
+                        <span>ThinkScript</span>
+                        <span>ThinkorSwim</span>
+                        <span>Technical Analysis</span>
+                    </div>
+                </div>
 
-<section id="resources">
-    <h2>Resources</h2>
-    <ul class="resource-list">
-        <li><a href="https://www.rrcsby.org/index.html#" target="_blank"></a></li>
-        <li><a href="https://www.medicaid.gov" target="_blank"></a></li>
-        <li><a href="https://www.nia.nih.gov" target="_blank"></a></li>
-    </ul>
-</section>
-    
+                <div class="project-card fade-in">
+                    <div class="project-number">02</div>
+                    <h3>VWAP Reversion Backtester</h3>
+                    <p>Python system that backtests mean reversion trades off the ±2σ VWAP bands, confirmed by EMA slope alignment across the 8, 13, and 21 EMAs. Pulls live data via the Schwab API.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Schwab API</span>
+                        <span>Quantitative Finance</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-number">03</div>
+                    <h3>EMA Slope Alignment Engine</h3>
+                    <p>Detects the precise moment EMA slopes align across three timeframes using first and second derivatives. Includes full backtesting framework with win rate, Sharpe ratio, and profit factor analytics.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>pandas</span>
+                        <span>NumPy</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-inner">
+            <div class="section-label slide-left">03 — Skills</div>
+            <h2 class="slide-left">What I Work With</h2>
+            <div class="skills-grid">
+                <div class="skill-block slide-left">
+                    <div class="skill-icon">⌨️</div>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML / CSS</li>
+                        <li>ThinkScript</li>
+                    </ul>
+                </div>
+                <div class="skill-block slide-left">
+                    <div class="skill-icon">📊</div>
+                    <h3>Finance & Data</h3>
+                    <ul>
+                        <li>Algorithmic Backtesting</li>
+                        <li>VWAP / EMA Analysis</li>
+                        <li>Options (Calls & Puts)</li>
+                        <li>pandas / NumPy</li>
+                    </ul>
+                </div>
+                <div class="skill-block slide-left">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>ThinkorSwim</li>
+                        <li>Schwab API</li>
+                        <li>GitHub / Git</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+                <div class="skill-block slide-left">
+                    <div class="skill-icon">🧠</div>
+                    <h3>Approach</h3>
+                    <ul>
+                        <li>Self-Directed Learning</li>
+                        <li>Systems Thinking</li>
+                        <li>Data-Driven Decisions</li>
+                        <li>Continuous Iteration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-inner">
+            <div class="section-label slide-left">04 — Contact</div>
+            <h2 class="slide-left">Let's Talk</h2>
+            <p class="slide-right">
+                Whether you're interested in the work I'm building, want to collaborate, 
+                or just want to talk markets — reach out.
+            </p>
+            <div class="contact-links fade-in">
+                <a href="https://github.com/toalenchar" target="_blank" class="contact-btn">GitHub</a>
+                <a href="mailto:your@email.com" class="contact-btn">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources">
+        <div class="section-inner">
+            <div class="section-label fade-in">05 — Resources</div>
+            <h2 class="fade-in">Community Resources</h2>
+            <p class="fade-in">Tools and organizations for people navigating reentry and building toward financial independence.</p>
+            <ul class="resource-list fade-in">
+                <li><a href="https://www.rrcsby.org/index.html" target="_blank">Reentry Resources Center — Somerset &amp; Wicomico</a></li>
+                <li><a href="https://www.medicaid.gov" target="_blank">Medicaid.gov — Healthcare Coverage</a></li>
+                <li><a href="https://www.nia.nih.gov" target="_blank">National Institute on Aging</a></li>
+                <li><a href="https://nextchapter.org" target="_blank">Next Chapter — Tech Careers After Incarceration</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Waverider Financial Strategies &nbsp;·&nbsp; Built by Thomas Palenchar</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
