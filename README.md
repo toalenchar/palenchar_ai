@@ -1,1 +1,1 @@
-This is a Web page for 
+This is a Web page for Waverider Financial Strategies. A site that highlights my commitment to understanding the financial markets and helping others make the most of the capital markets. Enter the Waverider portal when you're ready to learn how to navigate today's fast-paced digital world.
