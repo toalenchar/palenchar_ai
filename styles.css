@@ -315,6 +315,19 @@ section p {
     margin-bottom: 24px;
 }
 
+.project-img {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid rgba(0, 200, 255, 0.2);
+    border-radius: 2px;
+    display: block;
+    transition: border-color 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    border-color: rgba(0, 200, 255, 0.5);
+}
+
 .project-tags {
     display: flex;
     flex-wrap: wrap;
