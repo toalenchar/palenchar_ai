@@ -18,7 +18,15 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Scroll animations
+// Force hero elements visible on load with stagger
+window.addEventListener('load', () => {
+    const heroEls = document.querySelectorAll('#hero .fade-in, #hero .slide-left, #hero .slide-right');
+    heroEls.forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), 200 + i * 150);
+    });
+});
+
+// Scroll animations for everything else
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -28,7 +36,8 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-in, .slide-left, .slide-right').forEach(el => {
-    observer.observe(el);
+    // Skip hero elements — handled above
+    if (!el.closest('#hero')) observer.observe(el);
 });
 
 // Stagger project cards
@@ -42,11 +51,3 @@ document.querySelectorAll('.skill-block').forEach((block, i) => {
     block.style.transitionDelay = `${i * 0.1}s`;
     observer.observe(block);
 });
-
-
-
-
-
-
-
-
